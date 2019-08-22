@@ -1,0 +1,9 @@
+::ng-deep #gauge {
+    height: 220px;
+    width: 100%;
+}
+::ng-deep .gauge-element {
+    height: 400px;
+    width: auto;
+    display: inline-block;
+}

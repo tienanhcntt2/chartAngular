@@ -1,21 +1,110 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
-<router-outlet></router-outlet>
+<dx-circular-gauge id="gauge" [value]="100">
+  <dxo-scale
+      [startValue]="0"
+      [endValue]="360"
+      
+      [tickInterval]="22.5">
+      <dxo-label [useRangeColors]="true"
+                 [backgroundColor]="blue"
+                 [customizeText]="customizeText">
+      </dxo-label>
+  </dxo-scale>
+  <dxo-range-container>
+      <dxi-range [startValue]="0" [endValue]="22.5" color="#00FFFF"></dxi-range>
+      <dxi-range [startValue]="22.5" [endValue]="45" color="#00FFFF"></dxi-range>
+      <dxi-range [startValue]="45" [endValue]="67.5" color="#00FFFF"></dxi-range>
+      <dxi-range [startValue]="67.5" [endValue]="90" color="#00FFFF"></dxi-range>
+      <dxi-range [startValue]="90" [endValue]="112.5" color="#00FFFF"></dxi-range>
+      <dxi-range [startValue]="112.5" [endValue]="135" color="#00FFFF"></dxi-range>
+      <dxi-range [startValue]="135" [endValue]="157.5" color="#00FFFF"></dxi-range>
+      <dxi-range [startValue]="157.5" [endValue]="180" color="#00FFFF"></dxi-range>
+      <dxi-range [startValue]="180" [endValue]="202.5" color="#00FFFF"></dxi-range>
+      <dxi-range [startValue]="202.5" [endValue]="225" color="#00FFFF"></dxi-range>
+      <dxi-range [startValue]="225" [endValue]="247.5" color="#00FFFF"></dxi-range>
+      <dxi-range [startValue]="247.5" [endValue]="270" color="#00FFFF"></dxi-range>
+      <dxi-range [startValue]="270" [endValue]="292.5" color="#00FFFF"></dxi-range>
+      <dxi-range [startValue]="292.5" [endValue]="315" color="#00FFFF"></dxi-range>
+      <dxi-range [startValue]="315" [endValue]="337.5" color="#00FFFF"></dxi-range>
+      <dxi-range [startValue]="337.5" [endValue]="360" color="#00FFFF"></dxi-range>
+  </dxo-range-container>
+  <dxo-geometry [startAngle]="90" [endAngle]="90" ></dxo-geometry>
+</dx-circular-gauge>
+
+<h1>RainFail</h1>
+<dx-linear-gauge class="gauge-element"
+[value]="150">
+<dxo-value-indicator type="circle" color="#E3A857"></dxo-value-indicator>
+<dxo-title text="RainFail(mm)" horizontalAlignment="right"
+verticalAlignment="bottom">
+    <dxo-font [size]="16"></dxo-font>
+</dxo-title>
+<dxo-geometry orientation="vertical"></dxo-geometry>
+<dxo-scale  [startValue]="0" [endValue]="700" [customTicks]="[0, 200, 500, 700]">
+        <dxo-label>
+            <dxo-format type="decimal"></dxo-format>
+        </dxo-label>
+</dxo-scale>
+<dxo-range-container backgroundColor="none">
+    <dxi-range [startValue]="0" [endValue]="200" color="#A6C567"></dxi-range>
+    <dxi-range [startValue]="200" [endValue]="500" color="#FFFF00"></dxi-range>
+    <dxi-range [startValue]="500" [endValue]="700" color="#E18E92"></dxi-range>
+</dxo-range-container>
+
+</dx-linear-gauge>
+<h1>Huminity</h1>
+<dx-linear-gauge class="gauge-element"
+[value]="80">
+<dxo-value-indicator type="rhombus" color="#A4DDED"></dxo-value-indicator>
+<dxo-title text="Humidity (%)">
+    <dxo-font [size]="16"></dxo-font>
+</dxo-title>
+<dxo-geometry orientation="vertical"></dxo-geometry>
+<dxo-scale  [startValue]="0" [endValue]="100" [tickInterval]="20"></dxo-scale>
+<dxo-range-container backgroundColor="#CACACA"></dxo-range-container>
+</dx-linear-gauge>
+<h1>Teample</h1>
+<dx-linear-gauge class="gauge-element"
+        color="#FF0000"
+        [value]="25">
+        
+        <dxo-title text="Temperature (°C)">
+            <dxo-font [size]="16"></dxo-font>
+        </dxo-title>
+        <dxo-geometry orientation="vertical"></dxo-geometry>
+        <dxo-scale  [startValue]="-10" [endValue]="80" [tickInterval]="10" >
+
+           
+        </dxo-scale>
+        <dxo-range-container backgroundColor="none">  
+            <dxi-range [startValue]="-10" [endValue]="10" color="#FFFF00"></dxi-range>
+            <dxi-range [startValue]="10" [endValue]="40" color="#00FF00"></dxi-range>
+            <dxi-range [startValue]="40" [endValue]="80" color="#FF0000"></dxi-range>
+        </dxo-range-container>
+    </dx-linear-gauge>
+    <h1>Wind Speed</h1>
+    <dx-circular-gauge id="gauge" [value]="105">
+        <dxo-value-indicator
+        type="triangleNeedle"
+        color="#8FBC8F">
+    </dxo-value-indicator>
+      <dxo-scale
+          [startValue]="10"
+          [endValue]="250"
+          [tickInterval]="30">
+          <dxo-label [useRangeColors]="true"></dxo-label>
+      </dxo-scale>
+      <dxo-range-container palette="pastel">
+          <dxi-range [startValue]="10" [endValue]="90"></dxi-range>
+          <dxi-range [startValue]="90" [endValue]="180"></dxi-range>
+          <dxi-range [startValue]="180" [endValue]="250"></dxi-range>
+      </dxo-range-container>
+     
+      <dxo-title text="km/h"
+                 horizontalAlignment="center"
+  verticalAlignment="bottom"
+                
+                 >
+          <dxo-font [size]="28"></dxo-font>
+      </dxo-title>
+  </dx-circular-gauge>
